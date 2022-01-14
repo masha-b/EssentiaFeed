@@ -17,6 +17,7 @@
 		206AB90E277863430018ACC5 /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 206AB902277863420018ACC5 /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		206AB918277863C90018ACC5 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206AB917277863C90018ACC5 /* FeedItem.swift */; };
 		206AB91A277864710018ACC5 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206AB919277864710018ACC5 /* FeedLoader.swift */; };
+		20CAD73C278F2F3000D354B8 /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CAD73B278F2F3000D354B8 /* CacheFeedUseCaseTests.swift */; };
 		20CC4D652782ED6F00D7F081 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CC4D642782ED6F00D7F081 /* RemoteFeedLoader.swift */; };
 		20CC4D672784635B00D7F081 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CC4D662784635B00D7F081 /* HTTPClient.swift */; };
 		20CC4D69278463AB00D7F081 /* FeedItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CC4D68278463AB00D7F081 /* FeedItemMapper.swift */; };
@@ -52,6 +53,7 @@
 		206AB90C277863430018ACC5 /* EssentialFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedTests.swift; sourceTree = "<group>"; };
 		206AB917277863C90018ACC5 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		206AB919277864710018ACC5 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
+		20CAD73B278F2F3000D354B8 /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
 		20CC4D642782ED6F00D7F081 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 		20CC4D662784635B00D7F081 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		20CC4D68278463AB00D7F081 /* FeedItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemMapper.swift; sourceTree = "<group>"; };
@@ -127,6 +129,8 @@
 		206AB90B277863430018ACC5 /* EssentialFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				20CC4D6D2785C50D00D7F081 /* Helpers */,
+				20CAD73A278F2EA800D354B8 /* Feed Cache */,
 				20CC4D6A27846EA500D7F081 /* Feed Api */,
 				206AB90C277863430018ACC5 /* EssentialFeedTests.swift */,
 			);
@@ -140,6 +144,14 @@
 				206AB919277864710018ACC5 /* FeedLoader.swift */,
 			);
 			path = "Feed Feature";
+			sourceTree = "<group>";
+		};
+		20CAD73A278F2EA800D354B8 /* Feed Cache */ = {
+			isa = PBXGroup;
+			children = (
+				20CAD73B278F2F3000D354B8 /* CacheFeedUseCaseTests.swift */,
+			);
+			path = "Feed Cache";
 			sourceTree = "<group>";
 		};
 		20CC4D632782ED3E00D7F081 /* Feed API */ = {
@@ -156,7 +168,6 @@
 		20CC4D6A27846EA500D7F081 /* Feed Api */ = {
 			isa = PBXGroup;
 			children = (
-				20CC4D6D2785C50D00D7F081 /* Helpers */,
 				205745002782D2110057BF59 /* RemoteFeedLoaderTests.swift */,
 				20CC4D6B2785831100D7F081 /* URLSessionHTTPClientTests.swift */,
 			);
@@ -335,6 +346,7 @@
 				205745012782D2110057BF59 /* RemoteFeedLoaderTests.swift in Sources */,
 				20CC4D6F2785C57100D7F081 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				20CC4D6C2785831100D7F081 /* URLSessionHTTPClientTests.swift in Sources */,
+				20CAD73C278F2F3000D354B8 /* CacheFeedUseCaseTests.swift in Sources */,
 				206AB90D277863430018ACC5 /* EssentialFeedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -495,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
